@@ -87,6 +87,7 @@ class LoginController extends Controller
 
     protected function sendSuccessResponse(): RedirectResponse
     {
+        flash()->addSuccess('Logged in successfully using socialite');
         return to_route('dashboard');
     }
 }
