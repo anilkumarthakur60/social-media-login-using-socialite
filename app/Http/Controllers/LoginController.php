@@ -31,12 +31,12 @@ class LoginController extends Controller
         }
     }
 
-    private function isProviderAllowed($driver)
+    private function isProviderAllowed($driver): bool
     {
         return in_array($driver, $this->providers, true) && config()->has("services.{$driver}");
     }
 
-    protected function sendFailedResponse($msg = null)
+    protected function sendFailedResponse($msg = null): RedirectResponse
     {
         dd('mistake');
 
