@@ -1,7 +1,6 @@
 env file check app url
 ```APP_URL=http://127.0.0.1:8000/```
 
-<br/>
 
 inside config/services.php
 ```php
@@ -22,7 +21,9 @@ inside config/services.php
 ],
 
 ```
-//routes/web.php
+
+routes/web.php
+
 ```php
 
 Route::controller(LoginController::class)
@@ -35,7 +36,8 @@ Route::controller(LoginController::class)
 
 ```
 
-//LoginController.php
+LoginController.php
+
 ```php
 
     protected array $providers = [
