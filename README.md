@@ -3,6 +3,7 @@ APP_URL=http://sociallogin.test/
 
 
 inside config/services.php
+```php
 
  'github' => [
         'client_id' => env('GITHUB_CLIENT_ID'),
@@ -19,18 +20,18 @@ inside config/services.php
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
         'redirect' => env('APP_URL') . 'oauth/google/callback',
     ],
-    add as many as you want
-
-
-    add route 
-
     
+    //add as many as you want
+```
+add routes 
+
+```php
 Route::get('oauth/{driver}', [SocialLoginController::class,'redirectToProvider'])->name('social.oauth');
 Route::get('oauth/{driver}/callback', [SocialLoginController::class,'handleProviderCallback'])->name('social.callback');
+```
 
 
-
-
+```php
 SocialLoginController 
 
   protected $providers = [
@@ -111,6 +112,8 @@ SocialLoginController
     }
 
 
+
+```
 
 goto your developer console 
 
